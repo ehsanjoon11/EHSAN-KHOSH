@@ -5,13 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>داشبورد</title>
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="dashboard-container">
         <h2>پروفایل کاربری</h2>
+
+        <!-- کارت‌های اطلاعاتی -->
+        <div class="info-cards">
+            <div class="info-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>آمار</h3>
+                <p>۱۰۰ فعالیت</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-bell"></i>
+                <h3>اعلان‌ها</h3>
+                <p>۳ جدید</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-cog"></i>
+                <h3>تنظیمات</h3>
+                <p>مدیریت کنید</p>
+            </div>
+        </div>
+
+        <!-- نمایش اطلاعات کاربر -->
         <div id="userInfo">
             <!-- اطلاعات کاربر اینجا نمایش داده می‌شود -->
         </div>
+
+        <!-- دکمه خروج -->
         <button id="logout">خروج از حساب</button>
     </div>
 
