@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 * {
     margin: 0;
@@ -9,68 +10,34 @@
 
 body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
-    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
-/* نوار بالای صفحه */
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* افکت بلور برای پس‌زمینه */
+body::before {
+    content: "";
+    position: absolute;
     width: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    height: 100%;
     backdrop-filter: blur(10px);
+    z-index: 0;
 }
 
-top-bar nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-top-bar nav ul li {
-    display: inline;
-}
-
-top-bar nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-/* استایل پروفایل */
-.profile-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid white;
-}
-
-#profileName {
-    color: white;
-    font-weight: bold;
-}
-
-/* داشبورد */
+/* استایل داشبورد */
 .dashboard-container {
-    margin-top: 50px;
+    position: relative;
+    z-index: 1;
     background: rgba(255, 255, 255, 0.15);
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 450px;
+    width: 600px;
     backdrop-filter: blur(20px);
     border: 2px solid rgba(255, 255, 255, 0.3);
     color: #fff;
@@ -78,7 +45,42 @@ top-bar nav ul li a {
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* کارت‌های اطلاعاتی */
+.info-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* نمایش اطلاعات کاربر */
